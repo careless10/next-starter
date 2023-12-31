@@ -10,3 +10,19 @@ export default function Card() {
         </div>
     )
 }
+
+export function MiniCard(){
+    return (
+        <div>
+            <h3>Mini Card</h3>
+        </div>
+    )
+}
+
+export function MicroCard(){
+    return (
+        <div>
+            <h3>Micro Card</h3>
+        </div>
+    )
+}
