@@ -1,10 +1,15 @@
 'use client'
 
+import { useState } from "react";
+
+
 export default function Counter(){
-    function handleClick(event:any){
-        console.log(event);
+    const [counter,setCounter] = useState(0);
+    function handleClick(){
+        setCounter(counter+1);
     }
     return <div>
+        <h1>Counter: {counter}</h1>
         <button onClick={handleClick} >Click Me</button>
     </div>
 }
