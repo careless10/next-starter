@@ -10,9 +10,10 @@ const Counters = () => {
     })
 
 
-    function handleClick() {
+    function handleClick(counter:string) {
         const newCounters = {...counters};
-        newCounters.x += 1;
+        // newCounters.x += 1;
+        newCounters[counter] += 1;
         setCounters(newCounters)
     }
 
@@ -22,9 +23,9 @@ const Counters = () => {
             <h4>Counter x: {counters.x}</h4>
             <h4>Counter y: {counters.y}</h4>
             <h4>Counter z: {counters.z}</h4>
-            <div><button onClick={handleClick} >Increment X</button></div>
-            <div><button>Increment Y</button></div>
-            <div><button>Increment Z</button></div>
+            <div><button onClick={() => handleClick("x")}>Increment X</button></div>
+            <div><button onClick={() => handleClick("y")}>Increment Y</button></div>
+            <div><button onClick={() => handleClick("z")}>Increment Z</button></div>
         </div>
     )
 }
