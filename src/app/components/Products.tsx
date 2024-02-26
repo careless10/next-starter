@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 const Products = async () => {
@@ -13,7 +14,7 @@ const Products = async () => {
                     <h2 className="card-title">{item.title}</h2>
                     <p>{item.description.slice(0,50)}</p>
                     <div className="card-actions justify-end">
-                        <a href="https://wa.me/99988877766" className="btn btn-primary">Order Now</a>
+                        <Link href={`/products/${item.id}`} className="btn btn-primary">Details</Link>
                     </div>
                 </div>
             </div>)}
